@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFI - Logo Colors & Typography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/logo.png">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: rgb(250, 249, 245); /* Light beige background */
+            color: #2D3748; /* Default dark gray text (Tailwind gray-800) */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+        }
+        .font-title {
+            font-family: 'Syne', sans-serif;
+        }
+        .safi-logo-custom {
+            height: 180px; /* Increased logo size x3 */
+            width: auto;
+            object-fit: contain;
+        }
+        /* New Color Palette Variables */
+        :root {
+            --safi-primary: #0d4b80; /* Dark Blue */
+            --safi-accent1: #4cd2d5; /* Light Cyan */
+            --safi-accent2: #3ac3cc; /* Medium Cyan */
+            --safi-text-light: rgb(250, 249, 245);
+            --safi-text-dark: #2D3748; /* Tailwind gray-800 for general text */
+            --safi-text-heading: #0d4b80; /* Dark blue for headings */
+        }
+        .custom-button {
+            font-family: 'Syne', sans-serif;
+            padding: 0.75rem 1.75rem;
+            border-radius: 12px;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .custom-button-primary {
+            background-color: var(--safi-primary);
+            color: var(--safi-text-light);
+            border-color: var(--safi-primary);
+        }
+        .custom-button-primary:hover {
+            background-color: #0a3a66; /* Darker shade of primary */
+            border-color: #0a3a66;
+        }
+        .custom-button-secondary {
+            background-color: transparent;
+            color: var(--safi-primary);
+            border-color: var(--safi-primary);
+        }
+        .custom-button-secondary:hover {
+            background-color: rgba(13, 75, 128, 0.1); /* Light primary bg on hover */
+            color: #0a3a66;
+        }
+        .custom-button:disabled {
+            background-color: #E0E0E0;
+            color: #A0A0A0;
+            border-color: #E0E0E0;
+            cursor: not-allowed;
+        }
+        .upload-area-custom {
+            border: 2px dashed var(--safi-accent2); /* Medium Cyan dashed border */
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+        }
+        .upload-area-custom:hover {
+            border-color: var(--safi-primary); /* Dark blue on hover */
+            background-color: rgb(255, 255, 255);
+        }
+        .content-card-custom {
+            background-color: rgb(255, 255, 255);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .toast-custom {
+            font-family: 'Syne', sans-serif;
+            background-color: var(--safi-primary);
+            color: var(--safi-text-light);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .waveform-container-custom {
+            background-color: rgba(13, 75, 128, 0.05); /* Very light primary bg */
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .hero-illustration-custom {
+            max-width: 400px;
+            margin: 2rem auto;
+        }
+        /* Specific text color for hero subheading as per instructions */
+        .hero-subheading-color {
+            color: #4A5568; /* Tailwind gray-700 */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start pt-8 sm:pt-12 pb-12 px-4 sm:px-6 md:px-8">
+
+    <div class="w-full max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-indigo-600 to-indigo-500 py-12 md:py-16">
+            <div class="container mx-auto flex items-center justify-center gap-4 px-4">
+              <img src="/logo-transparent.png" alt="SAFI Logo" class="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
+              <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+                SAFI: Stutter Audio Fluency Improvement
+              </h1>
+            </div>
+            <p class="mt-4 text-base sm:text-lg md:text-xl text-indigo-200 text-center max-w-2xl mx-auto px-4">
+              Detects and removes disfluencies from voice recordings, delivering smooth, clear speech.
+            </p>
+          </header>
+
+        <!-- Hero Section -->
+        <section class="text-center mb-16 sm:mb-20">
+            
+            <img src="/illustrations/creative_illustration_logo_colors.png" alt="Creative audio illustration" class="hero-illustration-custom mb-10">
+            <div class="flex justify-center items-center space-x-4">
+                 <label for="audioFileHero" class="custom-button custom-button-primary cursor-pointer text-lg font-semibold">
+                    Upload Your Audio
+                    <input type="file" id="audioFileHero" class="hidden" accept="audio/*">
+                </label>
+            </div>
+        </section>
+
+        <!-- Main Application Area -->
+        <main class="w-full content-card-custom mb-12">
+            <!-- File Upload Section -->
+            <section class="mb-10">
+                <h2 class="font-title text-2xl font-semibold mb-4 text-center" style="color: var(--safi-text-heading);">Start by Uploading Your Audio File</h2>
+                <label for="audioFile" id="dropZone" class="upload-area-custom block w-full group">
+                    <input type="file" id="audioFile" class="hidden" accept="audio/*">
+                    <div class="flex flex-col items-center justify-center py-10">
+                        <svg class="w-16 h-16 text-gray-400 group-hover:text-[color:var(--safi-primary)] mb-4 transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l-3 3m3-3l3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.338-2.32 5.75 5.75 0 011.046 11.098A1.5 1.5 0 0018 19.5H6.75z" />
+                        </svg>
+                        <p class="font-title text-lg font-medium text-gray-700 group-hover:text-[color:var(--safi-text-heading)] transition-colors">Drag & drop your audio file here</p>
+                        <p class="text-sm text-gray-500 mt-1">or click to select. Supported: WAV, MP3, M4A, FLAC</p>
+                        <div id="fileNameDisplayContainer" class="mt-5 hidden">
+                            <span id="fileNameDisplay" class="inline-block text-sm font-medium px-4 py-2 rounded-lg" style="background-color: rgba(76, 210, 213, 0.2); color: var(--safi-primary);"></span>
+                        </div>
+                    </div>
+                </label>
+            </section>
+
+            <!-- Clean Button -->
+            <section class="mb-10 text-center">
+                <button id="cleanButton" class="custom-button custom-button-primary text-lg font-semibold w-full sm:w-auto">
+                    <span id="buttonText">Clean Audio with SAFI</span>
+                    <svg id="loaderIcon" class="animate-spin h-5 w-5 ml-3 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Waveform and Player Section -->
+            <section class="grid md:grid-cols-2 gap-6 sm:gap-8">
+                <div class="waveform-container-custom">
+                    <h3 class="font-title text-xl font-semibold mb-3" style="color: var(--safi-text-heading);">Original Audio</h3>
+                    <div id="waveform-original" class="w-full h-32 bg-white rounded-md border border-gray-200"></div>
+                    <audio id="originalPlayer" controls class="w-full mt-4 hidden"></audio>
+                </div>
+                <div class="waveform-container-custom">
+                    <h3 class="font-title text-xl font-semibold mb-3" style="color: var(--safi-text-heading);">Cleaned Audio</h3>
+                    <div id="waveform-cleaned-container">
+                        <div id="waveform-cleaned-skeleton" class="w-full h-32 bg-gray-200 rounded-md animate-pulse hidden"></div>
+                        <div id="waveform-cleaned" class="w-full h-32 bg-white rounded-md border border-gray-200"></div>
+                    </div>
+                    <audio id="cleanedPlayer" controls class="w-full mt-4 hidden"></audio>
+                    <a id="downloadLink" class="custom-button custom-button-secondary w-full mt-5 text-sm hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                        Download Cleaned Version
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 border-t border-gray-200">
+            
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-custom hidden fixed bottom-6 right-6 sm:bottom-8 sm:right-8 flex items-center gap-3 text-sm max-w-sm z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="color: var(--safi-accent1);" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+        <span id="toastMessage">Audio processed successfully!</span>
+        <a id="toastDownloadLink" href="#" download class="ml-auto hover:bg-opacity-80 font-medium py-1 px-2.5 rounded-md text-xs" style="background-color: var(--safi-accent2); color: var(--safi-primary);">Download</a>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

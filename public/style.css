@@ -1,0 +1,14 @@
+/*
+SAFI - Anthropic Geist Inspired Redesign
+
+This file is for any custom CSS overrides if absolutely needed beyond Tailwind CSS and inline styles in index.html.
+
+For this redesign, most styling is handled by:
+1. Tailwind CSS utility classes directly in `public/index.html`.
+2. Inline `<style>` tags within `public/index.html` for specific component needs (e.g., hero SVG curve, global font settings).
+
+No additional global CSS overrides are required in this file for the current design to maintain simplicity and reliance on the CDN.
+
+Refer to `public/index.html` for primary styling implementations.
+*/
+
